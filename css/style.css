@@ -480,7 +480,7 @@ address {
   background-color: #1a1a1a;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url('../images/testimonials-bg.webp');
+    url('../images/testimonials-bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
