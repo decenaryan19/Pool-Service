@@ -455,7 +455,6 @@ address {
 .gallery__item {
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  background-color: #eee; /* Nagse-serve bilang placeholder habang naglo-load ang image */
 }
 
 .gallery__item img {
@@ -576,7 +575,7 @@ address {
 }
 
 .contact__tagline {
-  color: var(--color-navy);
+  color: var(--color-primary);
   font-size: 1.05rem;
   font-weight: 500;
   margin-bottom: 12px;
@@ -858,12 +857,7 @@ address {
 @media (max-width: 768px) {
   .navbar__toggle {
     display: flex;
-    width: 48px;  /* Pinalaki mula 36px */
-    height: 48px; /* Pinalaki mula 36px */
-    align-items: center;
-    justify-content: center;
   }
-}
 
   .navbar__menu {
     position: fixed;
