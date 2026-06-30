@@ -3,14 +3,17 @@
    ============================================================ */
 
 :root {
-  --color-primary: #00B4FF;
-  --color-primary-dark: #0095d9;
+  /* INAYOS: Mas madilim na cyan/blue para pumasa ang white text sa contrast check */
+  --color-primary: #007CA6; 
+  --color-primary-dark: #005F80;
+  /* BAGO: Mas madilim na shade para sa text links na nakapatong sa white background */
+  --color-text-accent: #005A7A; 
   --color-navy: #2E3192;
-  --color-text: #333333;
-  --color-text-light: #555555;
+  --color-text: #222222; /* INAYOS: Mas maitim nang kaunti para sa body text */
+  --color-text-light: #4A4A4A; /* INAYOS: Mas madilim na gray para sa subtexts at cards */
   --color-white: #FFFFFF;
   --color-gray-bg: #F9F9F9;
-  --color-border: #dddddd;
+  --color-border: #cccccc; /* INAYOS: Mas madilim na border para sa form inputs */
   --font-family: 'Inter', Arial, Helvetica, sans-serif;
   --container-max: 1200px;
   --nav-height: 80px;
@@ -76,8 +79,9 @@ address {
   padding: 0 20px;
 }
 
+/* INAYOS: Gumagamit na ng mas madilim na kulay para sa nababasang text */
 .text-accent {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
 }
 
 /* ---- Buttons ---- */
@@ -174,7 +178,7 @@ address {
 }
 
 .navbar__link:hover {
-  color: var(--color-primary);
+  color: #00D2FF; /* Pwedeng maliwanag kapag hover sa dark nav background */
 }
 
 .navbar__toggle {
@@ -242,9 +246,9 @@ address {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.35) 50%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.55) 0%,  /* INAYOS: Ginawang mas madilim para sa contrast ng puting text */
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.65) 100%
   );
 }
 
@@ -264,11 +268,12 @@ address {
   letter-spacing: 0.04em;
   line-height: 1.2;
   margin-bottom: 24px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Dagdag-contrast para sa mataas na score */
 }
 
 .hero__subtitle {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.75;
   margin-bottom: 36px;
   max-width: 680px;
@@ -389,7 +394,7 @@ address {
 }
 
 .callout__heading a {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
   transition: color var(--transition);
 }
 
@@ -439,7 +444,7 @@ address {
 }
 
 .callout__card:hover .callout__label {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
 }
 
 /* ============================================================
@@ -478,8 +483,8 @@ address {
   padding: 80px 0;
   background-color: #1a1a1a;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url('../images/testimonials-bg.jpg');
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('../images/testimonials-bg.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -560,7 +565,7 @@ address {
 }
 
 .dual-cta__content p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.75;
   font-size: 1rem;
 }
@@ -574,10 +579,11 @@ address {
   padding: 80px 0;
 }
 
+/* INAYOS: Ginawang mas matingkad/madilim na accent para sa text contrast laban sa puti */
 .contact__tagline {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 12px;
 }
 
@@ -621,7 +627,7 @@ address {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 124, 166, 0.15);
 }
 
 .form-group textarea {
@@ -770,7 +776,7 @@ address {
 }
 
 .footer-main__links a:hover {
-  color: var(--color-primary);
+  color: var(--color-text-accent);
 }
 
 .footer-main__divider {
@@ -779,10 +785,11 @@ address {
   margin: 36px 0 24px;
 }
 
+/* INAYOS: Ginawang #555555 para madaling basahin ng text criteria ng Lighthouse */
 .footer-main__copyright {
   text-align: center;
   font-size: 13px;
-  color: #888888;
+  color: #555555; 
 }
 
 /* ============================================================
