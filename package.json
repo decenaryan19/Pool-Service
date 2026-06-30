@@ -1,0 +1,24 @@
+{
+  "name": "pool-service",
+  "version": "1.0.0",
+  "description": "Isang tumutugon at modernong website para sa isang negosyo ng paglilinis at pagpapanatili ng mga swimming pool sa Palm Coast, Florida. Ang proyektong ito ay naglalaman ng mga pahina para sa Home, About Us, at Contact Us na binuo gamit ang malinis na HTML at semantic structure.",
+  "main": "index.js",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decenaryan19/Pool-Service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/decenaryan19/Pool-Service/issues"
+  },
+  "homepage": "https://github.com/decenaryan19/Pool-Service#readme",
+  "dependencies": {
+    "sharp": "^0.35.2"
+  }
+}
