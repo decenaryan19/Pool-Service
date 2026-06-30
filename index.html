@@ -5,58 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Professional pool cleaning and maintenance services in Palm Coast, Florida. Affordable, reliable, and trusted by local homeowners.">
   <title>Palm Coast Pool Cleaning Services | Pool Cleaning &amp; Maintenance</title>
+  
+  <!-- Preconnect to Font Origins upang mas mabilis mag-load ang text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- A. Transparent Header Navigation -->
-   
- <header class="site-header" id="home">
-  <nav class="navbar" id="navbar" aria-label="Main navigation">
-    <div class="container navbar__inner">
-      
-      <a href="#home" class="navbar__logo">
-        <img src="images/logo.webp" alt="Pool Services Palm Coast" width="180" height="56">
-      </a>
+  <header class="site-header" id="home">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="container navbar__inner">
+        
+        <a href="#home" class="navbar__logo">
+          <img src="images/logo.webp" alt="Pool Services Palm Coast" width="180" height="56">
+        </a>
 
-      <button class="navbar__toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-
-      <ul class="navbar__menu" id="nav-menu">
-        <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
-        <li><a href="/pages/about.html" class="navbar__link">About Us</a></li>
-        <li><a href="/pages/contact.html" class="navbar__link">Contact</a></li>
-      </ul>
-      
-      <div class="navbar__search-placeholder">
-        <button class="search-btn" aria-label="Search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <button class="navbar__toggle" id="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
         </button>
+
+        <ul class="navbar__menu" id="nav-menu">
+          <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+          <li><a href="/pages/about.html" class="navbar__link">About Us</a></li>
+          <li><a href="/pages/contact.html" class="navbar__link">Contact</a></li>
+        </ul>
+        
+        <div class="navbar__search-placeholder">
+          <button class="search-btn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </div>
+
       </div>
+    </nav>
 
+    <div class="hero">
+      <div class="hero__bg">
+        <!-- OPTIMIZATION: Idinagdag ang fetchpriority="high" dahil ito ang Largest Contentful Paint (LCP) -->
+        <img src="images/hero-bg.webp" alt="Luxury swimming pool beside a modern residence" width="1920" height="1080" fetchpriority="high">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content container">
+        <h1 class="hero__title">YOUR PALM COAST POOL CLEANING SERVICE</h1>
+        <p class="hero__subtitle">Cool off every summer day confident in your home swimming pool. Our team of experienced technicians can take care of all your pool cleaning and maintenance needs.</p>
+        <a href="tel:3862065355" class="btn btn--primary">CALL NOW</a>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero">
-    <div class="hero__bg">
-      <img src="images/hero-bg.webp" alt="Luxury swimming pool beside a modern residence" width="1920" height="1080">
-      <div class="hero__overlay"></div>
-    </div>
-    <div class="hero__content container">
-      <h1 class="hero__title">YOUR PALM COAST POOL CLEANING SERVICE</h1>
-      <p class="hero__subtitle">Cool off every summer day confident in your home swimming pool. Our team of experienced technicians can take care of all your pool cleaning and maintenance needs.</p>
-      <a href="tel:3862065355" class="btn btn--primary">CALL NOW</a>
-    </div>
-  </div>
-</header>
   <main>
-
     <!-- C. Value Proposition Block -->
     <section class="value-prop" id="about" aria-labelledby="value-prop-heading">
       <div class="container">
@@ -76,32 +79,33 @@
 
     <!-- D. Core Services Section -->
     <section class="core-services" id="services" aria-labelledby="core-services-heading">
-  <div class="container">
-    <div class="core-services__grid">
-      
-      <div class="core-services__images">
-        <figure class="core-services__image core-services__image--large">
-          <img src="images/service-pool-1.webp" alt="Crystal-clear swimming pool and patio area" width="800" height="500">
-        </figure>
-        <figure class="core-services__image">
-          <img src="images/service-equipment.webp" alt="Professional pool cleaning equipment on pool deck" width="600" height="400">
-        </figure>
-      </div>
+      <div class="container">
+        <div class="core-services__grid">
+          
+          <div class="core-services__images">
+            <figure class="core-services__image core-services__image--large">
+              <!-- OPTIMIZATION: Lazy loading para sa below-the-fold images -->
+              <img src="images/service-pool-1.webp" alt="Crystal-clear swimming pool and patio area" width="800" height="500" loading="lazy">
+            </figure>
+            <figure class="core-services__image">
+              <img src="images/service-equipment.webp" alt="Professional pool cleaning equipment on pool deck" width="600" height="400" loading="lazy">
+            </figure>
+          </div>
 
-      <div class="core-services__content">
-        <h2 class="core-services__heading" id="core-services-heading">
-          SWIMMING POOL <span class="text-accent">CLEANING</span> SERVICES
-        </h2>
-        <p>Keep your pool sparkling clean and inviting with our comprehensive Swimming Pool Cleaning Services. Our dedicated team provides regular maintenance, including skimming, vacuuming, and chemical balancing, to ensure your water is always clear and safe for swimming. Enjoy peace of mind knowing that your pool is in expert hands, allowing you to relax and make the most of your outdoor haven.</p>
-        
-        <figure class="core-services__image core-services__image--right-side">
-          <img src="images/hero-bg.webp" alt="Cozy backyard pool with blue umbrella and wooden deck" width="600" height="400">
-        </figure>
-      </div>
+          <div class="core-services__content">
+            <h2 class="core-services__heading" id="core-services-heading">
+              SWIMMING POOL <span class="text-accent">CLEANING</span> SERVICES
+            </h2>
+            <p>Keep your pool sparkling clean and inviting with our comprehensive Swimming Pool Cleaning Services. Our dedicated team provides regular maintenance, including skimming, vacuuming, and chemical balancing, to ensure your water is always clear and safe for swimming. Enjoy peace of mind knowing that your pool is in expert hands, allowing you to relax and make the most of your outdoor haven.</p>
+            
+            <figure class="core-services__image core-services__image--right-side">
+              <img src="images/hero-bg.webp" alt="Cozy backyard pool with blue umbrella and wooden deck" width="600" height="400" loading="lazy">
+            </figure>
+          </div>
 
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
 
     <!-- E. Quick Callout Intermediary Section -->
     <section class="callout" aria-labelledby="callout-heading">
@@ -109,15 +113,15 @@
         <h2 class="callout__heading" id="callout-heading">Swimming pool Maintenance & cleaning services </h2>
         <div class="callout__grid">
           <a href="#about" class="callout__card">
-            <img src="images/nav-about.webp" alt="Screened-in pool lanai in Palm Coast" width="400" height="300">
+            <img src="images/nav-about.webp" alt="Screened-in pool lanai in Palm Coast" width="400" height="300" loading="lazy">
             <span class="callout__label">About Us</span>
           </a>
           <a href="#services" class="callout__card">
-            <img src="images/nav-services.webp" alt="Pool maintenance equipment and supplies" width="400" height="300">
+            <img src="images/nav-services.webp" alt="Pool maintenance equipment and supplies" width="400" height="300" loading="lazy">
             <span class="callout__label">Services</span>
           </a>
           <a href="#contact" class="callout__card">
-            <img src="images/nav-contact.webp" alt="Happy family enjoying a clean swimming pool" width="400" height="300">
+            <img src="images/nav-contact.webp" alt="Happy family enjoying a clean swimming pool" width="400" height="300" loading="lazy">
             <span class="callout__label">Contact Us</span>
           </a>
         </div>
@@ -127,14 +131,14 @@
     <!-- F. Seamless Photo Mosaic Gallery -->
     <section class="gallery" aria-label="Photo gallery">
       <div class="gallery__grid">
-        <div class="gallery__item"><img src="images/pool-1227098_1280-600x600.webp" alt="Child jumping into a clear blue pool" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/pool2.webp" alt="Overhead view of pool steps and clear water" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/gagles.webp" alt="Lounge chairs beside a sparkling pool" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/baby1.webp" alt="Screened pool enclosure in Florida" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/pool4.webp" alt="Tropical backyard pool with palm trees" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/pool6.webp" alt="Wide-angle view of a luxury pool area" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/pool7.webp" alt="Family swimming together in the pool" width="400" height="400"></div>
-        <div class="gallery__item"><img src="images/pool8.webp" alt="Child swimming underwater with goggles" width="400" height="400"></div>
+        <div class="gallery__item"><img src="images/pool-1227098_1280-600x600.webp" alt="Child jumping into a clear blue pool" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/pool2.webp" alt="Overhead view of pool steps and clear water" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/gagles.webp" alt="Lounge chairs beside a sparkling pool" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/baby1.webp" alt="Screened pool enclosure in Florida" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/pool4.webp" alt="Tropical backyard pool with palm trees" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/pool6.webp" alt="Wide-angle view of a luxury pool area" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/pool7.webp" alt="Family swimming together in the pool" width="400" height="400" loading="lazy"></div>
+        <div class="gallery__item"><img src="images/pool8.webp" alt="Child swimming underwater with goggles" width="400" height="400" loading="lazy"></div>
       </div>
     </section>
 
@@ -162,7 +166,7 @@
     <!-- H. Secondary Dual-Column CTA -->
     <section class="dual-cta" aria-labelledby="dual-cta-heading">
       <div class="dual-cta__image">
-        <img src="images/cta-pool-overhead.webp" alt="Overhead view of curved pool steps and clear blue water" width="960" height="600">
+        <img src="images/cta-pool-overhead.webp" alt="Overhead view of curved pool steps and clear blue water" width="960" height="600" loading="lazy">
       </div>
       <div class="dual-cta__content">
         <h2 class="dual-cta__heading" id="dual-cta-heading">CONTACT US FOR ALL YOUR POOL CLEANING NEEDS</h2>
@@ -202,13 +206,12 @@
           </div>
           <div class="contact__map">
             <a href="https://maps.google.com/?q=Palm+Coast,+FL+32137" target="_blank" rel="noopener noreferrer">
-              <img src="images/service-area-map.webp" alt="Map showing Palm Coast, Florida service area" width="600" height="500">
+              <img src="images/service-area-map.webp" alt="Map showing Palm Coast, Florida service area" width="600" height="500" loading="lazy">
             </a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- J. Two-Tier Footer -->
@@ -234,7 +237,7 @@
       <div class="container">
         <div class="footer-main__grid">
           <div class="footer-main__brand">
-            <img src="images/footer-logo.webp" alt="Pool Services Palm Coast" class="footer-main__logo" width="160" height="50">
+            <img src="images/footer-logo.webp" alt="Pool Services Palm Coast" class="footer-main__logo" width="160" height="50" loading="lazy">
             <address class="footer-main__address">
               Palm Coast Pool Cleaning Services<br>
               50 Legrand Blvd<br>
@@ -281,7 +284,8 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <script src="js/script.js"></script>
+  <!-- OPTIMIZATION: Idinagdag ang defer upang hindi maharangan ng JavaScript ang pag-render ng page -->
+  <script src="js/script.js" defer></script>
   
 </body>
 </html>
