@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Professional pool cleaning and maintenance services in Palm Coast, Florida. Affordable, reliable, and trusted by local homeowners.">
-  <title>Palm Coast Pool Cleaning Services | Pool Cleaning &amp; Maintenance</title>
+  <title>Palm Coast Pool Cleaning Services | Pool Cleaning & Maintenance</title>
   
-  <!-- Preconnect to Font Origins upang mas mabilis mag-load ang text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  </noscript>
   
+  <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp" fetchpriority="high">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- A. Transparent Header Navigation -->
   <header class="site-header" id="home">
     <nav class="navbar" id="navbar" aria-label="Main navigation">
       <div class="container navbar__inner">
@@ -47,7 +51,6 @@
 
     <div class="hero">
       <div class="hero__bg">
-        <!-- OPTIMIZATION: Idinagdag ang fetchpriority="high" dahil ito ang Largest Contentful Paint (LCP) -->
         <img src="images/hero-bg.webp" alt="Luxury swimming pool beside a modern residence" width="1920" height="1080" fetchpriority="high">
         <div class="hero__overlay"></div>
       </div>
@@ -60,7 +63,6 @@
   </header>
 
   <main>
-    <!-- C. Value Proposition Block -->
     <section class="value-prop" id="about" aria-labelledby="value-prop-heading">
       <div class="container">
         <h2 class="section-heading section-heading--center" id="value-prop-heading">AFFORDABLE SWIMMING POOL CLEANING SERVICES YOU CAN TRUST</h2>
@@ -77,14 +79,12 @@
       </div>
     </section>
 
-    <!-- D. Core Services Section -->
     <section class="core-services" id="services" aria-labelledby="core-services-heading">
       <div class="container">
         <div class="core-services__grid">
           
           <div class="core-services__images">
             <figure class="core-services__image core-services__image--large">
-              <!-- OPTIMIZATION: Lazy loading para sa below-the-fold images -->
               <img src="images/service-pool-1.webp" alt="Crystal-clear swimming pool and patio area" width="800" height="500" loading="lazy">
             </figure>
             <figure class="core-services__image">
@@ -107,7 +107,6 @@
       </div>
     </section>
 
-    <!-- E. Quick Callout Intermediary Section -->
     <section class="callout" aria-labelledby="callout-heading">
       <div class="container">
         <h2 class="callout__heading" id="callout-heading">Swimming pool Maintenance & cleaning services </h2>
@@ -128,7 +127,6 @@
       </div>
     </section>
 
-    <!-- F. Seamless Photo Mosaic Gallery -->
     <section class="gallery" aria-label="Photo gallery">
       <div class="gallery__grid">
         <div class="gallery__item"><img src="images/pool-1227098_1280-600x600.webp" alt="Child jumping into a clear blue pool" width="400" height="400" loading="lazy"></div>
@@ -142,28 +140,26 @@
       </div>
     </section>
 
-    <!-- G. Customer Testimonials Section -->
     <section class="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
         <h2 class="testimonials__heading" id="testimonials-heading">CUSTOMER TESTIMONIALS</h2>
         <div class="testimonials__grid">
           <blockquote class="testimonial">
-            <p>&ldquo;They show up on time every week, our pool has never looked cleaner! The technician is always polite and leaves notes on what chemicals were added. Highly recommend!&rdquo;</p>
+            <p>“They show up on time every week, our pool has never looked cleaner! The technician is always polite and leaves notes on what chemicals were added. Highly recommend!”</p>
           </blockquote>
           <blockquote class="testimonial">
-            <p>&ldquo;Incredibly reliable and fair prices. We've gone through a few pool cleaners, but Palm Coast Pool Cleaning is by far the most thorough. Five stars!&rdquo;</p>
+            <p>“Incredibly reliable and fair prices. We've gone through a few pool cleaners, but Palm Coast Pool Cleaning is by far the most thorough. Five stars!”</p>
           </blockquote>
           <blockquote class="testimonial">
-            <p>&ldquo;Very impressed with their attention to detail. They saved our green pool right before a big family gathering. Outstanding customer service!&rdquo;</p>
+            <p>“Very impressed with their attention to detail. They saved our green pool right before a big family gathering. Outstanding customer service!”</p>
           </blockquote>
           <blockquote class="testimonial">
-            <p>&ldquo;Local, professional, and trustworthy. They monitor everything from filters to chemical balances perfectly. Couldn't ask for a better service.&rdquo;</p>
+            <p>“Local, professional, and trustworthy. They monitor everything from filters to chemical balances perfectly. Couldn't ask for a better service.”</p>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- H. Secondary Dual-Column CTA -->
     <section class="dual-cta" aria-labelledby="dual-cta-heading">
       <div class="dual-cta__image">
         <img src="images/cta-pool-overhead.webp" alt="Overhead view of curved pool steps and clear blue water" width="960" height="600" loading="lazy">
@@ -175,7 +171,6 @@
       </div>
     </section>
 
-    <!-- I. Quote Request Form & Map Block -->
     <section class="contact" id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <p class="contact__tagline">Our services are only a phone call or text away</p>
@@ -214,7 +209,6 @@
     </section>
   </main>
 
-  <!-- J. Two-Tier Footer -->
   <footer class="site-footer">
     <div class="footer-bar">
       <div class="container footer-bar__inner">
@@ -275,7 +269,7 @@
         </div>
 
         <hr class="footer-main__divider">
-        <p class="footer-main__copyright">&copy; 2026 Palm Coast Pool Cleaning Services. All Rights Reserved.</p>
+        <p class="footer-main__copyright">© 2026 Palm Coast Pool Cleaning Services. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -284,7 +278,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <!-- OPTIMIZATION: Idinagdag ang defer upang hindi maharangan ng JavaScript ang pag-render ng page -->
   <script src="js/script.js" defer></script>
   
 </body>
