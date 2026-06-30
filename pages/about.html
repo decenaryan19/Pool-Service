@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Solusyon para makita ang navbar menu sa inner pages nang hindi binabago ang style.css */
+    .site-header--inner .navbar {
+      background: var(--color-navy);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +53,7 @@
 
     <section class="value-prop" id="about" aria-labelledby="value-prop-heading" style="padding-top: 140px;">
       <div class="container">
-        <h1 class="section-heading section-heading--center" id="value-prop-heading" style="font-size: 2.5rem; margin-bottom: 2rem;">SWIMMING POOL CLEANING SERVICES</h1>
+        <h1 class="section-heading section-heading--center" id="value-prop-heading">SWIMMING POOL CLEANING SERVICES</h1>
         <div class="value-prop__grid">
           <article class="card">
             <h3 class="card__title">POOL MANAGEMENT</h3>
@@ -78,10 +85,6 @@
               SWIMMING POOL MAINTENANCE & <br><span class="text-accent">CLEANING</span> SERVICES
             </h2>
             <p>Keep your pool sparkling clean and inviting with our comprehensive Swimming Pool Cleaning Services. Our dedicated team provides regular maintenance, including skimming, vacuuming, and chemical balancing, to ensure your water is always clear and safe for swimming. Enjoy peace of mind knowing that your pool is in expert hands, allowing you to relax and make the most of your outdoor haven.</p>
-            
-            <figure class="core-services__image core-services__image--right-side">
-              <img src="../images/hero-bg.webp" alt="Cozy backyard pool with blue umbrella and wooden deck" width="600" height="400">
-            </figure>
           </div>
 
         </div>
@@ -107,7 +110,8 @@
         <h2 class="contact__heading" id="contact-heading">Get in touch with us</h2>
         <div class="contact__grid">
           <div class="contact__form-wrap">
-            <p style="margin-bottom: 20px; color: #555;">Fill out the form below to schedule a swimming pool service. We would be happy to answer all your questions and schedule a consultation.<br><br>Looking forward to helping you keep your pool clean, sparkling, and ready for summer!</p>
+            <p style="margin-bottom: 20px;">Fill out the form below to schedule a swimming pool service. We would be happy to answer all your questions and schedule a consultation.<br><br>Looking forward to helping you keep your pool clean, sparkling, and ready for summer!</p>
+            
             <form class="contact__form" id="quote-form" novalidate>
               <div class="form-group">
                 <label for="first-name" class="visually-hidden">First Name</label>
@@ -125,13 +129,14 @@
                 <label for="message" class="visually-hidden">Comment or Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Comment or Message"></textarea>
               </div>
+              
               <button type="submit" class="btn btn--primary btn--submit">Contact Us</button>
               <p class="form-message form-message--success" id="form-success" hidden>Thank you! We'll be in touch shortly.</p>
               <p class="form-message form-message--error" id="form-error" hidden>Please fill in all required fields correctly.</p>
             </form>
           </div>
           <div class="contact__map">
-            <a href="https://maps.google.com/?q=Palm+Coast,+FL+32137" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
               <img src="../images/service-area-map.webp" alt="Map showing Palm Coast, Florida service area" width="600" height="500">
             </a>
           </div>
