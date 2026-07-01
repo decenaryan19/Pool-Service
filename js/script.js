@@ -13,18 +13,38 @@
   var formError = document.getElementById('form-error');
   var backToTop = document.getElementById('back-to-top');
 
+  // Cache the navbar height once instead of re-reading layout (offsetHeight)
+  // on every anchor click, which was forcing a synchronous reflow.
+  var navHeightCache = navbar ? navbar.offsetHeight : 0;
+  window.addEventListener('resize', function () {
+    navHeightCache = navbar ? navbar.offsetHeight : 0;
+  }, { passive: true });
+
   /* ---- Sticky navbar on scroll ---- */
-  function handleScroll() {
+  var scrollTicking = false;
+
+  function updateScrollState() {
+    var y = window.scrollY;
     if (navbar) {
-      navbar.classList.toggle('navbar--scrolled', window.scrollY > 60);
+      navbar.classList.toggle('navbar--scrolled', y > 60);
     }
     if (backToTop) {
-      backToTop.hidden = window.scrollY < 400;
+      backToTop.hidden = y < 400;
+    }
+    scrollTicking = false;
+  }
+
+  function handleScroll() {
+    // Batch the layout read/write into a single animation frame so the
+    // scroll handler never forces a reflow mid-scroll.
+    if (!scrollTicking) {
+      scrollTicking = true;
+      window.requestAnimationFrame(updateScrollState);
     }
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  updateScrollState();
 
   /* ---- Mobile menu ---- */
   function closeMenu() {
@@ -52,8 +72,7 @@
       if (!target) return;
 
       e.preventDefault();
-      var navHeight = navbar ? navbar.offsetHeight : 0;
-      var top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      var top = target.getBoundingClientRect().top + window.scrollY - navHeightCache;
 
       window.scrollTo({ top: top, behavior: 'smooth' });
       closeMenu();

@@ -3,8 +3,9 @@
    ============================================================ */
 
 :root {
-  --color-primary: #00B4FF;
-  --color-primary-dark: #0095d9;
+  --color-primary: #0077b6;
+  --color-primary-dark: #005f8f;
+  --color-primary-light: #00B4FF;
   --color-navy: #2E3192;
   --color-text: #333333;
   --color-text-light: #555555;
@@ -621,7 +622,7 @@ address {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
 }
 
 .form-group textarea {
@@ -782,7 +783,7 @@ address {
 .footer-main__copyright {
   text-align: center;
   font-size: 13px;
-  color: #888888;
+  color: var(--color-text-light);
 }
 
 /* ============================================================
